@@ -15,7 +15,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      overflow-y: auto;
     }
 
     /* Floating hearts background */
@@ -150,6 +150,8 @@
     #notepadScreen {
       flex-direction: column;
       padding: 40px 20px;
+      align-items: center;
+      overflow-y: auto;
     }
 
     .envelope-reveal {
@@ -435,6 +437,7 @@
   function showLetter() {
     document.getElementById('passwordScreen').classList.remove('active');
     document.getElementById('notepadScreen').classList.add('active');
+    window.scrollTo(0, 0);
     launchSparkles();
   }
 
